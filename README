@@ -1,4 +1,4 @@
-= Response Visualizer
+= vizres
 
 Enables rendering of the body of an HTTP response from inside a functional test.
 This makes it easy to diagnose problems when building assert_select statements
@@ -7,7 +7,15 @@ or just sanity check the output of the test.
 
 == Installation
 
-  script/plugin install http://respvisualizer.rubyforge.org/svn/response_visualizer/
+vizres uses git for source control. If you're running edge Rails, you can
+install it the normal way:
+
+  script/plugin install git://github.com/pelargir/vizres.git
+
+Otherwise, we recommend using the git-rails gem:
+
+  sudo gem install git-rails
+  git-rails install git://github.com/pelargir/vizres.git vizres
 
 
 == Usage
@@ -75,9 +83,9 @@ that the Mocha gem be installed locally:
 
 == Resources
 
-Subversion
+Git
 
-* http://respvisualizer.rubyforge.org/svn/response_visualizer/
+* http://github.com/pelargir/vizres/
 
 Blog
 
