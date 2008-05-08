@@ -6,7 +6,7 @@ module ResponseVisualizer
   RESPONSE_HTML = File.join(TMP, "response.html")
   RESPONSE_URI = "http://localhost:3000/tmp/response.html"
 
-  def visualize_response(format=:web)
+  def vr(format=:web)
     create_tmp_if_missing
     if format.is_a?(Symbol)
       case format
@@ -17,7 +17,6 @@ module ResponseVisualizer
       open_from_file(format, RESPONSE_HTML)
     end
   end
-  alias_method :vr, :visualize_response
 
   def open_from_file(data, write_to, read_from=nil)
     File.open(write_to, File::CREAT|File::TRUNC|File::WRONLY) { |f| f << data }

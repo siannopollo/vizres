@@ -4,7 +4,6 @@ require 'fileutils'
 require 'rubygems'
 require 'mocha'
 
-RAILS_ROOT = '.'
 require 'response_visualizer'
 
 class ResponseVisualizerTest < Test::Unit::TestCase
@@ -24,32 +23,32 @@ class ResponseVisualizerTest < Test::Unit::TestCase
     @response = stub(:body => "<html></html>")
   end
   
-  def test_visualize_response
+  def test_vr
     self.expects(:create_tmp_if_missing)
     File.expects(:open).with(RESPONSE_HTML, File::CREAT|File::TRUNC|File::WRONLY)
     Browser.expects(:open).with("http://localhost:3000/tmp/response.html")
-    visualize_response
+    vr
   end
   
-  def test_visualize_response_in_web
+  def test_vr_in_web
     self.expects(:create_tmp_if_missing)
     File.expects(:open).with(RESPONSE_HTML, File::CREAT|File::TRUNC|File::WRONLY)
     Browser.expects(:open).with("http://localhost:3000/tmp/response.html")
-    visualize_response(:web)
+    vr(:web)
   end
   
-  def test_visualize_response_in_html
+  def test_vr_in_html
     self.expects(:create_tmp_if_missing)
     File.expects(:open).with(RESPONSE_TXT, File::CREAT|File::TRUNC|File::WRONLY)
     Browser.expects(:open).with("./public/tmp/response.txt")
-    visualize_response(:html)
+    vr(:html)
   end
   
-  def test_visualize_response_with_raw_html
+  def test_vr_with_raw_html
     self.expects(:create_tmp_if_missing)
     File.expects(:open).with(RESPONSE_HTML, File::CREAT|File::TRUNC|File::WRONLY)
     Browser.expects(:open).with("./public/tmp/response.html")
-    visualize_response("<html></html>")
+    vr("<html></html>")
   end
   
   def test_create_tmp_if_missing_when_tmp_does_not_exist
