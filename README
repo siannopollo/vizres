@@ -12,10 +12,9 @@ install it the normal way:
 
   script/plugin install git://github.com/pelargir/vizres.git
 
-Otherwise, we recommend using the git-rails gem:
+Otherwise just clone the project directly:
 
-  sudo gem install git-rails
-  git-rails install git://github.com/pelargir/vizres.git vizres
+  git clone git://github.com/pelargir/vizres.git vendor/plugins/vizres
 
 
 == Usage
@@ -75,7 +74,7 @@ that the Mocha gem be installed locally:
 
 == Resources
 
-Git
+Repository
 
 * http://github.com/pelargir/vizres/
 
