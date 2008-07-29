@@ -4,6 +4,7 @@ require 'fileutils'
 require 'rubygems'
 require 'mocha'
 
+RAILS_ROOT = '.'
 require 'response_visualizer'
 
 class ResponseVisualizerTest < Test::Unit::TestCase
