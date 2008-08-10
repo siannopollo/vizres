@@ -1,6 +1,6 @@
-require 'response_visualizer/browser'
+require 'vizres/browser'
 
-module ResponseVisualizer
+module Vizres
   TMP = File.join(RAILS_ROOT, "public", "tmp")
   RESPONSE_TXT = File.join(TMP, "response.txt")
   RESPONSE_HTML = File.join(TMP, "response.html")
@@ -31,4 +31,4 @@ module ResponseVisualizer
   end
 end
 
-Test::Unit::TestCase.send(:include, ResponseVisualizer)
+Test::Unit::TestCase.send(:include, Vizres)

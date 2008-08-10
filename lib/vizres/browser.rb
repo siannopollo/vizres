@@ -1,4 +1,4 @@
-module ResponseVisualizer
+module Vizres
   class Browser
     class << self
       

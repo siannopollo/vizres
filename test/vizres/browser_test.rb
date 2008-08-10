@@ -3,7 +3,7 @@ require 'rubygems'
 require 'mocha'
 
 RAILS_ROOT = '.'
-require 'response_visualizer'
+require 'vizres'
 
 class BrowserTest < Test::Unit::TestCase
   

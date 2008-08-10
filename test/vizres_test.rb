@@ -5,9 +5,9 @@ require 'rubygems'
 require 'mocha'
 
 RAILS_ROOT = '.'
-require 'response_visualizer'
+require 'vizres'
 
-class ResponseVisualizerTest < Test::Unit::TestCase
+class VizresTest < Test::Unit::TestCase
   
   # class Response
   #   attr_accessor :body
