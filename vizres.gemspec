@@ -23,5 +23,4 @@ Gem::Specification.new do |s|
 		]
   s.rdoc_options = ["--main", "README"]
   s.extra_rdoc_files = ["README"]
-  s.add_dependency("mocha", ["> 0.5.6"])
 end
