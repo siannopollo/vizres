@@ -7,7 +7,7 @@ module Vizres
           FileUtils.mkdir_p(tmp_directory)
           
           if git?
-            system("echo 'public/tmp/*' >> #{RAILS_ROOT}/.gitignore")
+            system("echo '\npublic/tmp/*' >> #{RAILS_ROOT}/.gitignore")
           elsif svn?
             system("svn propset svn:ignore tmp #{RAILS_ROOT}/public")
           end
